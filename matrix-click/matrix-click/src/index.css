@@ -1,0 +1,62 @@
+/* General styling for the entire page */
+body {
+  background-color: #010120; /* Dark background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+/* Container for the matrix */
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns for 3x3 matrix */
+  grid-gap: 10px;
+}
+
+/* Box styles */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow */
+}
+
+/* Green box when clicked */
+.box.green {
+  background-color: #28a745; /* Green */
+  box-shadow: 0 0 20px rgba(40, 167, 69, 0.8); /* Green glow effect */
+}
+
+/* Orange box when turned */
+.box.orange {
+  background-color: #f39c12; /* Orange */
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.8); /* Orange glow effect */
+}
+
+/* Hover effect to make boxes more interactive */
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Neon outline effect for all boxes */
+.box {
+  border: 2px solid #444; /* Default border */
+}
+
+.box.green {
+  border: 8px solid #01ff3c; /* Green neon border */
+}
+
+.box.orange {
+  border: 8px solid #f39c12; /* Orange neon border */
+}
